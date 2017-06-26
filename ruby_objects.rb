@@ -36,31 +36,29 @@ puts Calculator.divide 10,2
 
 class Elevator
 	attr_accessor :floor
-	attr_accessor :rise
-	attr_accessor :fall
 	
 	def initialize (floor)
  		@floor = floor
- 		@rise = rise
- 		@fall = fall
 	end	
 
 	def goUp
 		@floor += 1
+		cheery_greeting
 	end
 
 	def goDown
 		@floor -= 1
+		cheery_greeting
+	end
+
+	def cheery_greeting
+		puts "welcome to floor #{floor} lucky you didn't die!"
 	end
 end
 
 deathtrap = Elevator.new 1
 deathtrap.goUp
-puts "You have arrived at floor number #{deathtrap.floor}"
-deathtrap.goUp
-puts "You have arrived at floor number #{deathtrap.floor}"
-deathtrap.goUp
-puts "You have arrived at floor number #{deathtrap.floor}"
 deathtrap.goDown
-puts "You have fallen to floor number #{deathtrap.floor}"
+
+#
 #
